@@ -1,0 +1,71 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<html>
+	<head>
+	<title>Space shooter</title>
+		<style>
+			canvas {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				background: transparent;
+			}
+			
+			#background {
+				z-index: -2;
+			}
+						
+			#jogar {
+				z-index: 0;
+				color: #000;
+				position: absolute;
+				text-align: center;
+				font-size: 25px;
+				line-height:0.5;
+				left: 64px;
+				top: 99px;
+				width: 475px;
+				height: 210px;
+				background-color: #FFF;
+				border-style:double;
+				border-radius:8px;
+				
+			}	
+	
+			#titulo{
+				z-index: 0;
+				color: #FFF;
+				font-size: 34px;
+				position: absolute;
+				left: 191px;
+				top: 28px;
+			}
+			
+			#botao{
+	position: absolute;
+	left: 562px;
+	top: 319px;
+			}
+			
+			
+			
+		</style>
+	</head>
+	<body onLoad="init()">
+		<!-- The canvas for the panning background -->
+	<canvas id="background" width="600" height="360">
+			O browser não suporta o canvas. Tente com um browser diferente.
+		</canvas>
+        <div id="titulo"> Shoot 'Em Up </div> 
+        <div id="jogar">
+          <p>&nbsp;</p>
+          <p>Curso Multimédia</p>
+          <p>Instituto Superior Miguel Torga</p>
+          <p>2013</p>       
+    </div>
+    <div id="botao"> <a href="../menu/menu.html"> <img src="imgs/seta.png"/> </a> </div>
+	<script src="creditos.js"></script>
+	</body>
+</html>

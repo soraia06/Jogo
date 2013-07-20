@@ -1,0 +1,67 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<html>
+	<head>
+	<title>Space shooter</title>
+		<style>
+			canvas {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				background: transparent;
+			}
+			
+			#background {
+				z-index: -2;
+			}
+						
+			#jogar {
+	z-index: 0;
+	color: #FF6;
+	position: absolute;
+	text-align: center;
+	font-size: 30px;
+	line-height: 1.5;
+	left: 146px;
+	top: 99px;
+	width: 271px;
+	height: 201px;
+			}	
+				
+			a:link{
+				color:#03C;
+				text-decoration:none;
+			}
+			
+			a:visited{
+				color:#03C;
+					text-decoration: none;
+			}
+			
+			#titulo{
+z-index: 0;
+	color: #FFF;
+	font-size: 34px;
+	position: absolute;
+	left: 191px;
+	top: 28px;
+			}
+			
+		</style>
+	</head>
+	<body onLoad="init()">
+		<!-- The canvas for the panning background -->
+	<canvas id="background" width="600" height="360">
+			O browser não suporta o canvas. Tente com um browser diferente.
+		</canvas>
+        <div id="titulo"> Shoot 'Em Up </div> 
+        <div id="jogar"><p><a href="../part5/space_shooter_part_five.html">Jogar</a></p>
+          <p><a href="../créditos/créditos.html">Créditos</a></p>
+        </div>
+        <div> 
+    <!-- load javascript -->
+	<script src="menu.js"></script>
+	</body>
+</html>

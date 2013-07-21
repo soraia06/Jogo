@@ -1,16 +1,3 @@
-
-/* NOTES TO REMEMBER
- * Could add 
- * - hitboxes to all objects to make collision better
- * - levels
- * - bosses
- * - explosions / particles
- * - parallax background
- * - vectors for movement
- * - lirbraries! http://www.createjs.com/#!/CreateJS
- */
-
-
 //inicializa jogo
 var game = new Game();
 
@@ -19,14 +6,14 @@ function init() {
 }
 
 
-
 /**
  * Define an object to hold all our images for the game so images
  * are only ever created once. This type of object is known as a 
  * singleton.
  */
 var imageRepository = new function() {
-	// Define images
+	
+	// Define imagens
 	this.background = new Image();
 	this.spaceship = new Image();
 	this.bullet = new Image();
@@ -58,14 +45,13 @@ var imageRepository = new function() {
 		imageLoaded();
 	}
 
-	// Set images src
+	// imagens
 	this.background.src = "imgs/bg.png";
 	this.spaceship.src = "imgs/ship.png";
 	this.bullet.src = "imgs/bullet.png";
 	this.enemy.src = "imgs/enemy.png";
 	this.enemyBullet.src = "imgs/bullet_enemy.png";
 }
-
 
 /**
  * Creates the Drawable object which will be the base class for
@@ -106,7 +92,9 @@ function Drawable() {
  * canvas and creates the illusion of moving by panning the image.
  */
 function Background() {
-	this.speed = 1; // Redefine speed of the background for panning
+	
+	//velocidade background
+	this.speed = 1; 
 	
 	// Implement abstract function
 	this.draw = function() {
@@ -575,7 +563,7 @@ function Ship() {
 	};
 	
 	/*
-	 * Fires two bullets
+	 * dispara 2 tiros
 	 */
 	this.fire = function() {
 		this.bulletPool.getTwo(this.x+6, this.y, 3,

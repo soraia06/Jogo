@@ -370,10 +370,18 @@ function QuadTree(boundBox, lvl) {
 			y: this.bounds.y + subHeight,
 			width: subWidth,
 			height: subHeight
-		}, level+1);
+		}, level+1);//variavel level???
 	};
+	
+	/*if (level==1) {
+		document.getElementById('level1').style.display = "block";
+		document.getElementById('level2').style.display = "none";
+	}
+	if (level==2){
+		document.getElementById('level1').style.display = "none";
+		document.getElementById('level2').style.display = "block";
+	}*/
 }
- 
 
 /**
  * Custom Pool object. Holds Bullet objects to be managed to prevent

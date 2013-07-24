@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Space Shooter</title>
-        
+        <link href='http://fonts.googleapis.com/css?family=Graduate' rel='stylesheet' type='text/css'>
 		<style>
 			canvas {
 				position: absolute;
@@ -24,16 +24,16 @@
 				position: absolute;
 				top: 5px;
 				left: 480px;
-				color: #00F;
-				font-family: Helvetica, sans-serif;
+				color:#FFF;
+				font-family: 'Graduate', cursive;
 				cursor: default;
 			}
 			.game-over {
 				position: absolute;
-				top: 100px;
+				top: 150px;
 				left: 210px;
-				color:#00F;
-				font-family: Helvetica, sans-serif;
+				color:#FFF;
+				font-family: 'Graduate', cursive;
 				font-size: 30px;
 				cursor: default;
 				display: none;
@@ -97,7 +97,7 @@
 		<canvas id="ship" width="600" height="360">
 		</canvas>
 		<div class="score">SCORE: <span id="score"></span></div>
-		<div class="game-over" id="game-over">Fim de jogo<p><span onclick="game.restart()">Jogar</span></p></div>
+		<div class="game-over" id="game-over">Game Over<p></div>
 		<div class="loading" id="loading">A carregar...</div>
 		<script src="space_shooter_part_five.js"></script>
         <div class="level1" id="level1">nivel1<p></div>

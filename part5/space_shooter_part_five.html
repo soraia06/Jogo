@@ -23,15 +23,15 @@
 			.score {
 				position: absolute;
 				top: 5px;
-				left: 480px;
+				left: 760px;
 				color:#FFF;
 				font-family: 'Graduate', cursive;
 				cursor: default;
 			}
 			.game-over {
 				position: absolute;
-				top: 150px;
-				left: 210px;
+				top: 200px;
+				left: 150px;
 				color:#FFF;
 				font-family: 'Graduate', cursive;
 				font-size: 30px;
@@ -76,7 +76,7 @@
 			.loading {
 				position: absolute;
 				top: 100px;
-				left: 210px;
+				left: 150px;
 				color: #00F;
 				font-family: Helvetica, sans-serif;
 				font-size: 30px;
@@ -86,15 +86,15 @@
 	</head>
 	<body>
 		<!-- The canvas for the panning background -->
-		<canvas id="background" width="600" height="360">
+		<canvas id="background" width="480" height="800">
 			Your browser does not support canvas. Please try again with a different browser.
 		</canvas>
 		<!-- The canvas for all enemy ships and bullets -->
-		<canvas id="main" width="600" height="360">
+		<canvas id="main" width="480" height="800">
 		</canvas>  
 		<!-- The canvas the ship uses (can only move up
          one forth the screen. -->
-		<canvas id="ship" width="600" height="360">
+		<canvas id="ship" width="480" height="800">
 		</canvas>
 		<div class="score">SCORE: <span id="score"></span></div>
 		<div class="game-over" id="game-over">Game Over<p></div>

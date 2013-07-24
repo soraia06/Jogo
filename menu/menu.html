@@ -16,8 +16,7 @@
 			
 			#background {
 				z-index: -2;
-				}
-				
+				}		
 						
 			#jogar {
 				z-index: 1;
@@ -25,8 +24,8 @@
 				position: absolute;
 				text-align: center;
 				font-size: 30px;
-				left: 146px;
-				top: 110px;
+				left: 100px;
+				top: 200px;
 				width: 271px;
 				height: 201px;
 			}	
@@ -37,8 +36,8 @@
 				position: absolute;
 				text-align: center;
 				font-size: 30px;
-				left: 146px;
-				top: 180px;
+				left: 100px;
+				top: 300px;
 				width: 271px;
 				height: 201px;
 			}
@@ -56,40 +55,22 @@
 			#titulo{
 				z-index: 0;
 				color: #FFF;
-				font-size: 32px;
+				font-size: 28px;
 				position: absolute;
-				left: 110px;
-				top: 35px;
+				left: 70px;
+				top: 45px;
 				font-family: 'Press Start 2P', cursive;				
-			}
-			
-			#botaoA{
-				z-index: 0;
-				position: absolute;
-				left: 203px;
-				top: 93px;
-			}
-			
-			#botaoB{
-				z-index: 0;
-				position: absolute;
-				left: 203px;
-				top: 161px;
-				}
-			
-			
+			}					
 		</style>
 	</head>
 	<body onLoad="init()">
 		<!-- The canvas for the panning background -->
-	<canvas id="background" width="600" height="360">
+	<canvas id="background" width="480" height="800">
 			O browser não suporta o canvas. Tente com um browser diferente.
 		</canvas>
         <div id="titulo"> Shoot 'Em Up </div> 
         <div id="jogar"><a href="../part5/space_shooter_part_five.html">Jogar</a></div>
     <div id="creditos"><a href="../creditos/creditos.html">Créditos</a></div>    
-    <div id="botaoA"> <img src="imgs/botaoA.png"/> </div>
-        <div id="botaoB"> <img src="imgs/botaoB.png"/> </div>
     <!-- load javascript -->
 	<script src="menu.js"></script>
 	</body>

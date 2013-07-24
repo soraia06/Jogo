@@ -598,9 +598,9 @@ function Enemy() {
 		this.speedX = 0;
 		this.speedY = speed;
 		this.alive = true;
-		this.leftEdge = this.x - 50;
-		this.rightEdge = this.x + 50;
-		this.bottomEdge = this.y + 150;
+		this.leftEdge = this.x - 60;
+		this.rightEdge = this.x + 60;
+		this.bottomEdge = this.y + 180;
 	};
 	
 //movimento inimigo
@@ -625,8 +625,8 @@ function Enemy() {
 			this.context.drawImage(imageRepository.enemy, this.x, this.y);
 		
 //tiros inimigo
-			chance = Math.floor(Math.random()*401);
-			if (chance/400 < percentFire) {
+			chance = Math.floor(Math.random()*301);
+			if (chance/300 < percentFire) {
 				this.fire() ; 
 			}
 			

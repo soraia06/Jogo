@@ -5,7 +5,9 @@
 <html>
 	<head>
 	<title>Space shooter</title>
-    <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+ <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+     <link href='http://fonts.googleapis.com/css?family=Graduate' rel='stylesheet' type='text/css'>
+     <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 		<style>
 			canvas {
 				position: absolute;
@@ -19,27 +21,29 @@
 				}		
 						
 			#jogar {
-				z-index: 1;
+				z-index: 2;
 				color:#FFF;
 				position: absolute;
 				text-align: center;
 				font-size: 30px;
 				left: 100px;
-				top: 200px;
+				top: 260px;
 				width: 271px;
 				height: 201px;
+				font-family: 'Oxygen', sans-serif;
 			}	
 			
 			#creditos {
-				z-index: 1;
+				z-index: 2;
 				color: #FF6;
 				position: absolute;
 				text-align: center;
 				font-size: 30px;
 				left: 100px;
-				top: 300px;
+				top: 359px;
 				width: 271px;
 				height: 201px;
+				font-family:'Oxygen', sans-serif;
 			}
 				
 			a:link{
@@ -55,22 +59,47 @@
 			#titulo{
 				z-index: 0;
 				color: #FFF;
-				font-size: 28px;
+				font-size: 32px;
 				position: absolute;
-				left: 70px;
-				top: 45px;
+				left: 55px;
+				top: 55px;
 				font-family: 'Press Start 2P', cursive;				
-			}					
+			}	
+			#base{
+				z-index: 0;
+				position: absolute;
+				left: 65px;
+				top: 200px;
+			}
+			
+			#botao{
+				z-index: 1;
+				position: absolute;
+				left: 150px;
+				top: 251px;			
+			}
+			
+			#botao1{
+				z-index: 1;
+				position: absolute;
+				left: 150px;
+				top: 350px;			
+			}
+			
+							
 		</style>
 	</head>
 	<body onLoad="init()">
 		<!-- The canvas for the panning background -->
 	<canvas id="background" width="480" height="800">
 			O browser não suporta o canvas. Tente com um browser diferente.
-		</canvas>
+	</canvas>
         <div id="titulo"> Shoot 'Em Up </div> 
         <div id="jogar"><a href="../part5/space_shooter_part_five.html">Jogar</a></div>
-    <div id="creditos"><a href="../creditos/creditos.html">Créditos</a></div>    
+    <div id="creditos"><a href="../creditos/creditos.html">Créditos</a></div> 
+    <div id="base"> <img src="imgs/base.png"/> </div>   
+    <div id="botao"><img src="imgs/botao.png" width="176" height="58"> </div>
+    <div id="botao1"><img src="imgs/botao.png" width="176" height="58"> </div>
 	<script src="menu.js"></script>
 	</body>
 </html>

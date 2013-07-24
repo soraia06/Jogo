@@ -520,8 +520,7 @@ function Ship() {
 	this.move = function() {	
 		counter++;
 		// Determine if the action is move action
-		if (KEY_STATUS.left || KEY_STATUS.right ||
-				KEY_STATUS.down || KEY_STATUS.up) {
+		if (mouseX || mouseY) {
 			// The ship moved, so erase it's current image so it can
 			// be redrawn in it's new location
 			this.context.clearRect(this.x, this.y, this.width, this.height);
@@ -529,19 +528,19 @@ function Ship() {
 			// Update x and y according to the direction to move and
 			// redraw the ship. Change the else if's to if statements
 			// to have diagonal movement.
-			if (KEY_STATUS.left) {
+			if (mouseX) {
 				this.x -= this.speed
 				if (this.x <= 0) // Kep player within the screen
 					this.x = 0;
-			} else if (KEY_STATUS.right) {
+			} else if (mouseX) {
 				this.x += this.speed
 				if (this.x >= this.canvasWidth - this.width)
 					this.x = this.canvasWidth - this.width;
-			} else if (KEY_STATUS.up) {
+			} else if (mouseY) {
 				this.y -= this.speed
 				if (this.y <= this.canvasHeight/4*3)
 					this.y = this.canvasHeight/4*3;
-			} else if (KEY_STATUS.down) {
+			} else if (mouseY) {
 				this.y += this.speed
 				if (this.y >= this.canvasHeight - this.height)
 					this.y = this.canvasHeight - this.height;
@@ -774,8 +773,7 @@ function Game() {
 		this.quadTree.clear();
 		
 		this.background.init(0,0);
-		this.ship.init(this.shipStartX, this.shipStartY, 
-		               imageRepository.spaceship.width, imageRepository.spaceship.height);
+		this.ship.init(this.shipStartX, this.shipStartY,imageRepository.spaceship.width, imageRepository.spaceship.height);
 		
 		this.enemyPool.init("enemy");
 		this.spawnWave();
@@ -909,6 +907,36 @@ function detectCollision() {
 	}
 };
 
+
+/*eventos touch*/
+
+function onTouch(event){
+
+switch(event.type){
+	
+	case "touchstart": type ="mousedown";
+	case "touchmove": type="mousemove" ;
+	case "touchend": type ="mouseup";
+	
+	} 
+
+}
+
+function init() 
+{
+    document.addEventListener("touchstart", onTouch, true);
+    document.addEventListener("touchmove", onTouch, true);
+    document.addEventListener("touchend", onTouch, true);  
+}
+
+function mousemove(event){
+	
+	var mouseX = event.touches[0].pageX;
+    var mouseY = event.touches[0].pageY;
+	}
+	
+/************************************************************************/	
+	
 
 // The keycodes that will be mapped when a user presses a button.
 // Original code by Doug McInnes

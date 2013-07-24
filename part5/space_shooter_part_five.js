@@ -4,8 +4,6 @@ var game = new Game();
 function init() {
 	game.init();
 }
-
-
 /**
  * Define an object to hold all our images for the game so images
  * are only ever created once. This type of object is known as a 
@@ -85,7 +83,6 @@ function Drawable() {
 	};
 }
 
-
 /**
  * Creates the Background object which will become a child of
  * the Drawable object. The background is drawn on the "background"
@@ -122,9 +119,8 @@ Background.prototype = new Drawable();
 function Bullet(object) {	
 	this.alive = false; // Is true if the bullet is currently in use
 	var self = object;
-	/*
-	 * Sets the bullet values
-	 */
+	
+	/* valores tiro */
 	this.spawn = function(x, y, speed) {
 		this.x = x;
 		this.y = y;
@@ -163,9 +159,7 @@ function Bullet(object) {
 		}
 	};
 	
-	/*
-	 * Resets the bullet values
-	 */
+	/* reset valores tiro */
 	this.clear = function() {
 		this.x = 0;
 		this.y = 0;
@@ -496,7 +490,6 @@ function Pool(maxSize) {
 	};
 }
 
-
 /**
  * Create the Ship object that the player controls. The ship is
  * drawn on the "ship" canvas and uses dirty rectangles to move
@@ -570,9 +563,7 @@ function Ship() {
 		}
 	};
 	
-	/*
-	 * dispara 2 tiros
-	 */
+	/*dispara 2 tiros*/
 	this.fire = function() {
 		this.bulletPool.getTwo(this.x+6, this.y, 3,
 		                       this.x+33, this.y, 3);
@@ -592,14 +583,14 @@ function Enemy() {
 	
 //valores inimigo
 	this.spawn = function(x, y, speed) {
-		this.x = x;
-		this.y = y;
+		this.x = 480-x;
+		this.y =y;
 		this.speed = speed;
 		this.speedX = 0;
 		this.speedY = speed;
 		this.alive = true;
-		this.leftEdge = this.x - 60;
-		this.rightEdge = this.x + 60;
+		this.leftEdge = this.x - 40;
+		this.rightEdge = this.x + 1;
 		this.bottomEdge = this.y + 180;
 	};
 	
